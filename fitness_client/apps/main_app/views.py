@@ -28,6 +28,7 @@ def login(request):
     user = User.objects.filter(email = request.POST['email'])
     request.session['logged_in'] = True
     request.session['user_id'] = user[0].id
+    print("test")
     return redirect('/main')
 
 def main(request):
